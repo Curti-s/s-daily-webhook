@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 4567;
 
-app.get('/', (req, res) => {
+app.all('/', (req, res) => {
   const handler = async () => {
     try {
       const { status } = await axios.post('https://api.github.com/repos/Curti-s/s-daily/actions/workflows/deploy.yml/dispatches',
