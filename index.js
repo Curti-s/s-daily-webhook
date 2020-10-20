@@ -4,7 +4,7 @@ const axios = require('axios');
 const express = require('express');
 
 const app = express();
-const PORT = 4567;
+const PORT = process.env.PORT || 4567;
 
 app.get('/', (req, res) => {
   const handler = async () => {
